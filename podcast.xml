@@ -1,0 +1,21 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description }}</description>
+    {% for episode in site.episodes %}
+    <item>
+      <title>{{ episode.title }}</title>
+      <description>{{ episode.description }}</description>
+      <enclosure url="{{ site.url }}{{ episode.file }}" length="12345678" type="audio/mpeg" />
+      <guid>{{ site.url }}{{ episode.file }}</guid>
+      <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+      <itunes:duration>{{ episode.duration }}</itunes:duration>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
