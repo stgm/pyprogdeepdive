@@ -9,7 +9,7 @@ title: "Home"
 <ul>
   {% for episode in site.episodes %}
     <li>
-      <h2><a href="{{ episode.url }}">{{ episode.title }}</a></h2>
+      <h2><a href="{{ site.baseurl }}{{ episode.url }}">{{ episode.title }}</a></h2>
       <p>{{ episode.description }}</p>
     </li>
   {% endfor %}
