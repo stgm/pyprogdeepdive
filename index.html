@@ -11,11 +11,6 @@ title: "Home"
     <li>
       <h2><a href="{{ episode.url }}">{{ episode.title }}</a></h2>
       <p>{{ episode.description }}</p>
-      <audio controls>
-        <source src="{{ episode.file }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <p>Duration: {{ episode.duration }}</p>
     </li>
   {% endfor %}
 </ul>
